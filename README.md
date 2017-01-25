@@ -11,7 +11,7 @@ yarn add @standard-library/galvo-clicker
 ## Usage
 
 ```javascript
-import clicker from "galvo-clicker";
+import clicker from "@standard-library/galvo-clicker";
 
 button = clicker("button");
 
