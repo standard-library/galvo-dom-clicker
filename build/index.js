@@ -6,11 +6,17 @@ Object.defineProperty(exports, "__esModule", {
 
 var _kefir = require("kefir");
 
-function paginator(kind) {
+function createElementWithClass(kind) {
   var element = document.createElement("div");
-  var click = _kefir.Kefir.fromEvents(element, "click");
 
   element.className = kind;
+
+  return element;
+}
+
+function clicker(kind) {
+  var element = createElementWithClass(kind);
+  var click = _kefir.Kefir.fromEvents(element, "click");
 
   click.onValue(function (e) {
     return e.preventDefault();
@@ -19,4 +25,4 @@ function paginator(kind) {
   return { element: element, click: click };
 }
 
-exports.default = paginator;
+exports.default = clicker;
