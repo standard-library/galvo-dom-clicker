@@ -6,16 +6,16 @@ Object.defineProperty(exports, "__esModule", {
 
 var _kefir = require("kefir");
 
-function createElementWithClass(kind) {
-  var element = document.createElement("div");
+function createElementWithClass(kind, className) {
+  var element = document.createElement(kind);
 
-  element.className = kind;
+  element.className = className;
 
   return element;
 }
 
 function clicker(kind) {
-  var element = createElementWithClass(kind);
+  var element = createElementWithClass("div", kind);
   var click = _kefir.Kefir.fromEvents(element, "click");
 
   click.onValue(function (e) {
