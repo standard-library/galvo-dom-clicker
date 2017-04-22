@@ -1,17 +1,17 @@
-# galvo-clicker
+# galvo-dom-clicker
 
 A function that, given a class name, creates an element with a corresponding click event stream. Could be used for adding left and right arrows to a slideshow.
 
 ## Installation
 
 ```shell
-yarn add @standard-library/galvo-clicker
+yarn add @standard-library/galvo-dom-clicker
 ```
 
 ## Usage
 
 ```javascript
-import clicker from "@standard-library/galvo-clicker";
+import clicker from "@standard-library/galvo-dom-clicker";
 
 button = clicker("button");
 
@@ -25,7 +25,7 @@ Using [galvo](https://github.com/standard-library/galvo) this event stream can b
 
 ```javascript
 import galvo from "@standard-library/galvo";
-import clicker from "@standard-library/galvo-clicker";
+import clicker from "@standard-library/galvo-dom-clicker";
 
 const next = clicker("paginator");
 const sequence = galvo({
