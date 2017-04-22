@@ -1,6 +1,6 @@
 {
   "name": "@standard-library/galvo-dom-clicker",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Not a paginator",
   "main": "build/index.js",
   "scripts": {
