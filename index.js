@@ -11,10 +11,12 @@ function createElementWithClass(kind, className) {
 function clicker(kind) {
   const element = createElementWithClass("div", kind);
   const click = K.fromEvents(element, "click");
+  const mousedown = K.fromEvents(element, "mousedown");
+  const mouseup = K.fromEvents(element, "mouseup");
 
-  click.onValue((e) => e.preventDefault());
+  click.onValue(e => e.preventDefault());
 
-  return { element, click };
+  return { element, click, mousedown, mouseup };
 }
 
 export default clicker;

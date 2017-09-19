@@ -17,12 +17,14 @@ function createElementWithClass(kind, className) {
 function clicker(kind) {
   var element = createElementWithClass("div", kind);
   var click = _kefir.Kefir.fromEvents(element, "click");
+  var mousedown = _kefir.Kefir.fromEvents(element, "mousedown");
+  var mouseup = _kefir.Kefir.fromEvents(element, "mouseup");
 
   click.onValue(function (e) {
     return e.preventDefault();
   });
 
-  return { element: element, click: click };
+  return { element: element, click: click, mousedown: mousedown, mouseup: mouseup };
 }
 
 exports.default = clicker;

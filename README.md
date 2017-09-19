@@ -19,6 +19,10 @@ button.element
 // => <div class="button"></div>
 button.click
 // => Kefir.Stream
+button.mousedown
+// => Kefir.Stream
+button.mouseup
+// => Kefir.Stream
 ```
 
 Using [galvo](https://github.com/standard-library/galvo) this event stream can be used to move forward and backward in a sequence of elements:
